@@ -27,15 +27,23 @@
                 <h2 id="entry-title">Videos</h2>
                 <section class="videos">
                     <?php while ($videos->have_posts()) {
-                        $videos->the_post(); ?>
+                        $videos->the_post();
+                        
+                        // before we can set up our video, we need to get the
+                        // information about our post thumbnail.  what we need
+                        // is both its alt text and the image's source.
+                        
+                        $imageAlt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
+                        $imageSrc =  ?>
                         
                         <iliff-video
                             permalink="<?= get_the_permalink () ?>"
                             excerpt="<?= htmlentities(strip_tags(get_the_excerpt())) ?>"
+                            date="<?= get_the_date(get_option('date_format')) ?>"
+                            src="<?= get_the_post_thumbnail(null, 'medium'); ?>"
                             title="<?= htmlentities(get_the_title()) ?>"
                             timestamp="<?= get_the_date('U') ?>"
-                            date="<?= get_the_date(get_option('date_format')) ?>">
-                        </iliff-video>
+                        ></iliff-video>
                        
                     <?php } ?>
                 </section>

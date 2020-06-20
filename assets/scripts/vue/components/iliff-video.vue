@@ -3,9 +3,10 @@
         <header>
             <a :href="permalink">
                 <h3 v-text="title"></h3>
+                <div class="featured-image" :data-iamge="src"></div>
             </a>
         </header>
-        <p class="video-excerpt" v-text="excerpt" @click="showVideo"></p>
+        <p class="video-excerpt" v-text="excerpt"></p>
         <footer>
             <strong>Posted:</strong>
             <time :datetime="timestamp" v-text="date"></time>
@@ -16,11 +17,13 @@
 <script>
     export default {
         name: "iliff-video",
-        props: ["permalink", "title", "excerpt", "timestamp", "date"],
-        methods: {
-            showVideo() {
-                //window.location.href = this.permalink;
-            }
-        }
+        props: [
+            "permalink",
+            "title",
+            "excerpt",
+            "timestamp",
+            "date",
+            "src"
+        ],
     }
 </script>
