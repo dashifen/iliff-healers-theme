@@ -8,10 +8,22 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: rem(1200px);
+  width: 96%;
+}
+
 a {
   &:link,
   &:visited {
-    color: $black;
+    color: $teal;
   }
 
   &:active,
@@ -21,16 +33,10 @@ a {
   }
 }
 
-body {
-  font-size: rem(18px);
-
-  /*&.admin-bar {
-    margin-top: -32px;
-  }*/
-}
-
-nav .menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.site-footer {
+  background-color: $purple;
+  border-top: 5px solid $black;
+  color: $white;
+  margin-top: rem(60px);
+  text-align: center;
 }

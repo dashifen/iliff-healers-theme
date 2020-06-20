@@ -1,42 +1,47 @@
 <!doctype html>
 <html class="no-js" <?php language_attributes() ?>>
 <head>
-    <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class() ?>>
-    <header class="header" aria-labelledby="site-title">
-        <h1 id="site-title">Iliff+Healers Initiative</h1>
-        <div class="motto">
-            <blockquote class="screen-reader-text">
-                <p>We wake, if we wake at all, to mystery.</p>
-                <cite>Annie Dillard</cite>
-            </blockquote>
-        </div>
-    </header>
+    <div class="container" id="vue-root">
+        <header class="header" aria-labelledby="site-title">
+            <a class="header-link site-title" href="<?php home_url() ?>">
+                <h1 id="site-title">Iliff+Healers Initiative</h1>
+            </a>
+            <a class="header-link motto" href="<?php home_url() ?>">
+                <div class="motto">
+                    <blockquote class="screen-reader-text">
+                        <p>We wake, if we wake at all, to mystery.</p>
+                        <cite>Annie Dillard</cite>
+                    </blockquote>
+                </div>
+            </a>
+        </header>
     
-    <main>
-        <?php $videos = new WP_Query(['post_type' => 'iliff-videos']);
-        if ($videos->have_posts()) { ?>
-            <section class="videos">
-                <?php while ($videos->have_posts()) {
-                    $videos->the_post(); ?>
-                
-                    <article class="video">
-                        <header><?php the_title() ?></header>
-                        <?php the_excerpt() ?>
-                        <footer>
-                            <time datetime="<?php the_date('U') ?>">
-                                <?php the_date() ?>
-                            </time>
-                        </footer>
-                    </article>
-                <?php } ?>
-            </section>
-        <?php } ?>
-    </main>
+        <main id="content" aria-labelledby="entry-title">
+            <?php $videos = new WP_Query(['post_type' => 'iliff-video']);
+            if ($videos->have_posts()) { ?>
+                <h2 id="entry-title">Videos</h2>
+                <section class="videos">
+                    <?php while ($videos->have_posts()) {
+                        $videos->the_post(); ?>
+                        
+                        <iliff-video
+                            permalink="<?= get_the_permalink () ?>"
+                            excerpt="<?= htmlentities(strip_tags(get_the_excerpt())) ?>"
+                            title="<?= htmlentities(get_the_title()) ?>"
+                            timestamp="<?= get_the_date('U') ?>"
+                            date="<?= get_the_date(get_option('date_format')) ?>">
+                        </iliff-video>
+                       
+                    <?php } ?>
+                </section>
+            <?php } ?>
+        </main>
+    </div>
     
     <footer class="site-footer">
         &copy; <?= date('Y') ?> Iliff+Healers Initiative

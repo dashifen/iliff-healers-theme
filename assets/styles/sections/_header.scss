@@ -1,0 +1,48 @@
+.header {
+  margin-bottom: rem(60px);
+  text-align: center;
+
+  .header-link {
+    color: $black;
+    outline: none;
+    text-decoration: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+
+  #site-title {
+    margin: rem(20px);
+    font-size: rem(40px);
+    font-weight: bold;
+  }
+
+  .motto {
+    background: url("images/wordmark.jpg") center center no-repeat;
+    background-size: contain;
+    height: 300px;
+  }
+
+  @include onTablets {
+    display: grid;
+    grid-column-gap: rem(60px);
+    grid-template-columns: 33% auto;
+    text-align: left;
+
+    .header-link {
+      display: inline-grid;
+    }
+
+    #site-title {
+      align-self: end;
+      padding-bottom: rem(60px);
+    }
+
+    .header-link.motto {
+      grid-row: 1;
+    }
+  }
+}

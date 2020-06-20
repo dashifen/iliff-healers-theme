@@ -1,0 +1,17 @@
+#content {
+  text-align: center;
+
+  @include onTablets {
+    text-align: left;
+
+    .videos {
+      display: grid;
+      grid-gap: rem(20px);
+      grid-template-columns: repeat(3, 1fr);
+
+      @include onScreens {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}
