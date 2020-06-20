@@ -1,0 +1,29 @@
+{
+  "name": "dashifen/iliffhealers",
+  "description": "A theme for iliffhealers.com.",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "David Dashifen Kees",
+      "email": "dashifen@dashifen.com",
+      "role": "developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dashifen\\IliffHealers\\" : "src"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "require": {
+    "php": ">=7.4",
+    "ext-json": ">=7.4",
+    "dashifen/wp-handler": "^9.6",
+    "dashifen/wp-templates": "^3.2",
+    "timber/timber": "^1.16"
+  }
+}
