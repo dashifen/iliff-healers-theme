@@ -2,6 +2,7 @@
   "name": "dashifen/iliffhealers",
   "description": "A theme for iliffhealers.org.",
   "minimum-stability": "stable",
+  "type": "wordpress-theme",
   "license": "proprietary",
   "authors": [
     {
