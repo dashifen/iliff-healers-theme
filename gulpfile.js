@@ -15,7 +15,7 @@ const {src, dest, parallel, watch} = require('gulp'),
 const paths = {
   css: {
     src: 'assets/styles/**/*.scss',
-    entry: 'assets/styles/dashifen.scss',
+    entry: 'assets/styles/iliff-healers.scss',
     dest: 'assets/'
   },
   js: {
@@ -23,7 +23,7 @@ const paths = {
       'assets/scripts/**/*.js',
       'assets/scripts/**/*.vue'
     ],
-    entry: 'assets/scripts/dashifen.js',
+    entry: 'assets/scripts/iliff-healers.js',
     dest: 'assets/'
   },
   content: [

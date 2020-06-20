@@ -1,2 +1,2 @@
 # Iliff+Healers
-A theme for iliffhealers.com.
+A theme for iliffhealers.org.
