@@ -14,4 +14,13 @@
       }
     }
   }
+
+  .video header .featured-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid $black;
+    height: 250px;
+    width: auto;
+  }
 }

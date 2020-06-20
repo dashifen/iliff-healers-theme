@@ -3,7 +3,7 @@
         <header>
             <a :href="permalink">
                 <h3 v-text="title"></h3>
-                <div class="featured-image" :data-iamge="src"></div>
+                <div class="featured-image" :style="background"></div>
             </a>
         </header>
         <p class="video-excerpt" v-text="excerpt"></p>
@@ -25,5 +25,10 @@
             "date",
             "src"
         ],
+        computed: {
+            background() {
+                return 'background-image: url("' + this.src + '");';
+            }
+        }
     }
 </script>
