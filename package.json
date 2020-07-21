@@ -16,7 +16,7 @@
     "@fortawesome/pro-solid-svg-icons": "^5.12.1",
     "@fortawesome/vue-fontawesome": "<=1",
     "autoprefixer": "^9.7.4",
-    "browser-sync": "^2",
+    "browser-sync": "^2.26.10",
     "css-loader": "^3.4.2",
     "cssnano": "^4",
     "gulp": "^4.0.2",
