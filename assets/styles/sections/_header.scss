@@ -14,10 +14,32 @@
     }
   }
 
-  #site-title {
-    margin: rem(20px);
-    font-size: rem(40px);
-    font-weight: bold;
+  .site-title-and-menu {
+    margin: rem(60px) 0 rem(30px);
+
+    #site-title {
+      font-size: rem(40px);
+      font-weight: bold;
+      padding-bottom: 0;
+    }
+
+    .menu {
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        font-weight: bold;
+        padding: rem(5px) rem(10px);
+      }
+
+      li + li {
+        border-left: 1px solid $black;
+      }
+    }
   }
 
   .motto {
@@ -38,7 +60,7 @@
 
     #site-title {
       align-self: end;
-      padding-bottom: rem(60px);
+      padding-bottom: rem(30px);
     }
 
     .header-link.motto {
