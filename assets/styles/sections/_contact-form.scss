@@ -23,11 +23,15 @@
     }
   }
 
+  .acf-contact-form-required span:after {
+    content: '⭐'
+  }
+
   input,
   textarea {
     width: 100%;
 
-    @include onScreens {
+    @include onTablets {
       max-width: 50%;
       width: rem(500px);
     }
