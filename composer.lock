@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8cf4cc63d5ede9ee81e8ab1fb3c826f0",
+    "content-hash": "15e99880c45de1b9cd07925b33318b74",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -254,6 +254,88 @@
             "time": "2020-04-07T06:57:05+00:00"
         },
         {
+            "name": "dashifen/acf-agent",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dashifen/acf-agents.git",
+                "reference": "064f79a675c1c0cbdbb0f24390a69275cb38e25e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dashifen/acf-agents/zipball/064f79a675c1c0cbdbb0f24390a69275cb38e25e",
+                "reference": "064f79a675c1c0cbdbb0f24390a69275cb38e25e",
+                "shasum": ""
+            },
+            "require": {
+                "dashifen/wp-handler": "^10.0",
+                "php": ">=7.4"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Dashifen\\ACFAgent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Dashifen Kees",
+                    "email": "dashifen@dashifen.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "An Agent for use with one of my Handler packages that manages ACF data.",
+            "time": "2020-07-31T16:55:00+00:00"
+        },
+        {
+            "name": "dashifen/acf-contact-form",
+            "version": "dev-release",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dashifen/acf-contact-form.git",
+                "reference": "1de167c0682868132e41c505ccfe8bd6e8642651"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dashifen/acf-contact-form/zipball/1de167c0682868132e41c505ccfe8bd6e8642651",
+                "reference": "1de167c0682868132e41c505ccfe8bd6e8642651",
+                "shasum": ""
+            },
+            "require": {
+                "dashifen/acf-agent": "^2.2",
+                "dashifen/wp-handler": "^10.0",
+                "ext-json": "*",
+                "php": ">=7.4",
+                "timber/timber": "^1.17"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Dashifen\\ContactForm\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Dashifen Kees",
+                    "email": "dashifen@dashifen.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "A WordPress plugin that uses ACF to present a contact form.",
+            "support": {
+                "source": "https://github.com/dashifen/acf-contact-form/tree/release",
+                "issues": "https://github.com/dashifen/acf-contact-form/issues"
+            },
+            "time": "2020-08-05T22:46:47+00:00"
+        },
+        {
             "name": "dashifen/collection",
             "version": "2.0.0",
             "source": {
@@ -289,6 +371,40 @@
             ],
             "description": "An abstract object from which concrete collections can be built.",
             "time": "2020-07-29T15:00:49+00:00"
+        },
+        {
+            "name": "dashifen/debugging",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dashifen/debugging.git",
+                "reference": "2443dbf994351e94ffa36ea992b1a5b8b87250e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dashifen/debugging/zipball/2443dbf994351e94ffa36ea992b1a5b8b87250e8",
+                "reference": "2443dbf994351e94ffa36ea992b1a5b8b87250e8",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dashifen\\Debugging\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Dashifen Kees",
+                    "email": "dashifen@dashifen.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "A PHP Trait that defines static methods used for on-screen debugging.",
+            "time": "2020-08-02T14:27:05+00:00"
         },
         {
             "name": "dashifen/exception",
@@ -406,17 +522,54 @@
             "time": "2020-03-11T14:56:21+00:00"
         },
         {
-            "name": "dashifen/wp-handler",
-            "version": "10.0.1",
+            "name": "dashifen/wp-debugging",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dashifen/wp-handler.git",
-                "reference": "c05f0d378c3d39261a39a3357a80449f6ab5b29d"
+                "url": "https://github.com/dashifen/wp-debugging.git",
+                "reference": "ace122de19a558bf2596d809986b70359a4d7026"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dashifen/wp-handler/zipball/c05f0d378c3d39261a39a3357a80449f6ab5b29d",
-                "reference": "c05f0d378c3d39261a39a3357a80449f6ab5b29d",
+                "url": "https://api.github.com/repos/dashifen/wp-debugging/zipball/ace122de19a558bf2596d809986b70359a4d7026",
+                "reference": "ace122de19a558bf2596d809986b70359a4d7026",
+                "shasum": ""
+            },
+            "require": {
+                "dashifen/debugging": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dashifen\\WPDebugging\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "David Dashifen Kees",
+                    "email": "dashifen@dashifen.com",
+                    "role": "developer"
+                }
+            ],
+            "description": "A PHP trait that can be used by other objects for on-screen debugging within a WordPress environment.",
+            "time": "2020-08-02T15:02:40+00:00"
+        },
+        {
+            "name": "dashifen/wp-handler",
+            "version": "10.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dashifen/wp-handler.git",
+                "reference": "cd1aa3f8bf9f04f739844a686ca83b813854cd8f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dashifen/wp-handler/zipball/cd1aa3f8bf9f04f739844a686ca83b813854cd8f",
+                "reference": "cd1aa3f8bf9f04f739844a686ca83b813854cd8f",
                 "shasum": ""
             },
             "require": {
@@ -424,6 +577,7 @@
                 "dashifen/exception": "^1",
                 "dashifen/repository": "^3",
                 "dashifen/transformer": "^2",
+                "dashifen/wp-debugging": "^1",
                 "php": ">=7.4"
             },
             "type": "project",
@@ -444,7 +598,7 @@
                 }
             ],
             "description": "An object to define handlers for various WordPress action and filter hooks using protected methods. ",
-            "time": "2020-07-30T14:21:57+00:00"
+            "time": "2020-08-05T11:53:31+00:00"
         },
         {
             "name": "dashifen/wp-templates",
@@ -486,7 +640,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -562,7 +716,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -704,16 +858,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.13.0",
+            "version": "v2.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "46a612ba1bbf6ee1c58acabacd868212ff8a2911"
+                "reference": "57e96259776ddcacf1814885fc3950460c8e18ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/46a612ba1bbf6ee1c58acabacd868212ff8a2911",
-                "reference": "46a612ba1bbf6ee1c58acabacd868212ff8a2911",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/57e96259776ddcacf1814885fc3950460c8e18ef",
+                "reference": "57e96259776ddcacf1814885fc3950460c8e18ef",
                 "shasum": ""
             },
             "require": {
@@ -767,18 +921,6 @@
             ],
             "funding": [
                 {
-                    "url": "https://certification.symfony.com/",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://live.symfony.com/",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://symfony.com/cloud/",
-                    "type": "custom"
-                },
-                {
                     "url": "https://github.com/fabpot",
                     "type": "github"
                 },
@@ -787,7 +929,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-05T13:08:05+00:00"
+            "time": "2020-08-05T15:09:04+00:00"
         },
         {
             "name": "upstatement/routes",
@@ -844,7 +986,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "dashifen/acf-contact-form": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
