@@ -24,7 +24,10 @@
   }
 
   .acf-contact-form-required span:after {
-    content: '⭐'
+    content: '⭐';
+    font-size: 50%;
+    position: relative;
+    bottom: rem(7px);
   }
 
   input,
