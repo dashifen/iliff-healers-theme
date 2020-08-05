@@ -1,9 +1,7 @@
 #content {
-  text-align: center;
+  text-align: left;
 
   @include onTablets {
-    text-align: left;
-
     .videos {
       display: grid;
       grid-gap: rem(20px);

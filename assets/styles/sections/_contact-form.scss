@@ -17,6 +17,10 @@
       display: block;
       font-weight: bold;
     }
+
+    & + li {
+      margin-top: rem(30px);
+    }
   }
 
   input,
